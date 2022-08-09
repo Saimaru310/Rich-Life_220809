@@ -1,0 +1,112 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+//------------------------------------
+// btn
+//------------------------------------
+.btn {
+  display: inline-block;
+  line-height: 1;
+
+  &--login {
+    font-size: rem(14);
+    font-weight: 700;
+    padding: rem(10) rem(21) rem(6);
+    border: 1px solid currentColor;
+    border-radius: 999px;
+
+    &:focus,
+    &:hover {
+      color: $color-font-reverse;
+      background-color: $color-font;
+      border-color: $color-font;
+      opacity: 1;
+    }
+  }
+
+  &--register {
+    font-size: rem(24);
+    font-weight: 700;
+    color: $color-font-reverse;
+    background: linear-gradient(to right, #669988, #668899);
+    padding: rem(37) rem(55) rem(31) rem(36);
+    border-radius: 16px;
+    position: relative;
+
+    @include media(m) {
+      font-size: rem(18);
+      padding: rem(22) rem(49) rem(16) rem(26);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 28px;
+    }
+
+    &::before {
+      width: 16px;
+      height: 2px;
+      background-color: $color-font-reverse;
+      border-radius: 999px;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid $color-font-reverse;
+      border-right: 2px solid $color-font-reverse;
+      border-radius: 1px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+      transition: all 0.3s;
+    }
+  }
+
+  &--faq {
+    font-size: rem(20);
+    color: $color-font-reverse;
+    font-weight: bold;
+    background-color: $color-accent;
+    padding: rem(28) rem(92) rem(22) rem(84);
+    border-radius: 32px;
+    position: relative;
+
+    @include media(s) {
+      font-size: rem(16);
+      padding: rem(14) rem(47) rem(11) rem(33);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 11.25px;
+      height: 15px;
+      background: transparent url('../img/common/img_play.png') no-repeat center center / contain;
+      position: absolute;
+      top: 50%;
+      right: 70px;
+      transform: translateY(-50%);
+
+      @include media(s) {
+        width: 7.5px;
+        height: 10px;
+        right: 25px;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      opacity: 0.8;
+      transition: all 0.3s;
+    }
+  }
+}

@@ -1,0 +1,128 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+//------------------------------------
+// footer
+//------------------------------------
+.footer {
+  color: $color-font-reverse;
+  background-color: $color-font;
+  padding: rem(75) 0 rem(32);
+
+  @include media(s) {
+    padding: rem(30) 0 rem(8);
+  }
+}
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media(s) {
+    max-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__item {
+    width: 25%;
+
+    @include media(s) {
+      width: 50%;
+    }
+
+    &:nth-child(n + 3) {
+      @include media(s) {
+        margin-top: rem(32);
+      }
+    }
+  }
+
+  &__title {
+    font-size: rem(18);
+    line-height: calc(36/18);
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 1px;
+      background-color: rgba($color-font-reverse, 0.4);
+      position: absolute;
+      top: calc(100% + 7px);
+      left: 0;
+    }
+  }
+
+  &__subList {
+    margin-top: rem(40);
+  }
+}
+
+.footer-subList {
+
+  &__item {
+    font-size: rem(14);
+    line-height: calc(22/14);
+
+    @include media(xs) {
+      font-size: rem(12);
+      line-height: 1.5;
+    }
+  }
+}
+
+.footer-sns {
+  margin-top: rem(85);
+  display: flex;
+
+  @include media(s) {
+    max-width: 350px;
+    margin-top: rem(32);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__list {
+    &:not(:first-child) {
+      margin-left: rem(30);
+    }
+  }
+
+  &__link {
+    display: block;
+
+    .fa-brands {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.footer-caution {
+  font-size: rem(11);
+  line-height: calc(22/11);
+  font-weight: bold;
+  margin-top: rem(90);
+
+  @include media(s) {
+    max-width: 350px;
+    margin-top: rem(40);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.copyright {
+  font-size: rem(11);
+  line-height: calc(22/11);
+  font-weight: 500;
+  margin-top: rem(15);
+
+  @include media(s) {
+    max-width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

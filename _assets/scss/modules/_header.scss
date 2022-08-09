@@ -1,0 +1,222 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+//------------------------------------
+// header
+//------------------------------------
+.header-pc {
+  width: 100%;
+  height: 74px;
+
+  @include media(s) {
+    display: none;
+  }
+
+  &>.inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.global-nav {
+  display: flex;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-left: rem(50);
+    }
+
+    &:nth-child(4) {
+      margin-left: rem(34);
+    }
+
+    &:nth-child(5) {
+      margin-left: rem(40);
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: rem(14);
+    font-weight: 700;
+
+    &--icon {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 10.4px;
+        height: 8.8px;
+        background: transparent url('../../img/common/img-inverted-triangle.png') no-repeat center center / contain;
+        position: absolute;
+        top: 48%;
+        left: calc(100% + 5px);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.header-btnWrapper {
+  margin-left: rem(33);
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 32px;
+  height: 28px;
+
+  @include media(s) {
+    width: auto;
+  }
+
+  i {
+    font-size: 1.75em;
+
+    @include media(s) {
+      font-size: 1.15em;
+    }
+  }
+}
+
+.header-sp {
+  display: none;
+
+  @include media(s) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &>.inner {
+    width: 100%;
+  }
+}
+
+.header-sp-content {
+  width: 100%;
+  height: 57px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawer-menu {
+  position: relative;
+  width: 16px;
+  height: 12px;
+  cursor: pointer;
+
+  &__icon {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $color-font;
+    border-radius: 999px;
+
+    &--top {
+      top: 0;
+      transition: all 0.3s;
+    }
+
+    &--middle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--bottom {
+      bottom: 0;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.header-sp-logo {
+  width: 93px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-sp-iconList {
+  display: flex;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-left: rem(29);
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header-sp-nav {
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-main;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+
+  &__list {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    height: 100%;
+
+    &:not(:first-child) {
+      margin-right: rem(22);
+      margin-left: rem(30);
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: rem(14);
+    font-weight: 700;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 10.4px;
+      height: 8.8px;
+      background: transparent url('../img/common/img-inverted-triangle.png') no-repeat center center / contain;
+      position: absolute;
+      top: 50%;
+      left: calc(100% + 4px);
+      transform: translateY(-50%);
+    }
+  }
+}

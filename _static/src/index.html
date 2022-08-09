@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Title & Description-->
+  <title>Rich-Life</title>
+  <meta name="description" content="Rich-Lifeのdescription">
+  <!-- no index-->
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Font Awesome-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!-- Google font-->
+  <link rel="preconnect" href="//fonts.googleapis.com">
+  <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+  <link href="//fonts.googleapis.com/css2?family=Hind:wght@400;500;700&amp;family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <!-- jQueryの読込-->
+  <script src="//code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- CSS-->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <header class="header-pc">
+    <div class="inner">
+
+      <h1 class="header-pc-logo">
+        <a href="#" class="header-pc-logo__link">
+          <img src="../img/common/logo.png" alt="Rich-Life">
+        </a><!-- /.header-pc-logo__link -->
+      </h1><!-- /.header-pc-logo -->
+
+      <nav class="global-nav">
+        <ul class="global-nav__list">
+          <li class="global-nav__item">
+            <a href="#" class="global-nav__link global-nav__link--icon">家具</a><!-- /.global-nav__link -->
+          </li><!-- /.global-nav__item -->
+          <li class="global-nav__item">
+            <a href="#" class="global-nav__link global-nav__link--icon">家電</a><!-- /.global-nav__link -->
+          </li><!-- /.global-nav__item -->
+          <li class="global-nav__item">
+            <a href="#" class="global-nav__link">法人のお客様へ</a><!-- /.global-nav__link -->
+          </li><!-- /.global-nav__item -->
+          <li class="global-nav__item header-btnWrapper">
+            <a href="#" class="btn btn--login">ログイン/会員登録</a><!-- /.btn -->
+          </li><!-- /.global-nav__item -->
+          <li class="global-nav__item cart">
+            <a href="#" class="cart-link" aria-label="カートへ"><i class="fa-solid fa-cart-shopping"></i></a><!-- /.btn -->
+          </li><!-- /.global-nav__item -->
+        </ul><!-- /.global-nav__list -->
+      </nav><!-- /.global-nav -->
+
+    </div><!-- /.inner -->
+  </header><!-- /.header-pc -->
+
+  <header class="header-sp">
+    <div class="inner">
+
+      <div class="header-sp-content">
+
+        <button type="button" class="drawer" id="js-drawer">
+          <div class="drawer-menu">
+            <span class="drawer-menu__icon drawer-menu__icon--top"></span><!-- /.drawer-menu__icon -->
+            <span class="drawer-menu__icon drawer-menu__icon--middle"></span><!-- /.drawer-menu__icon -->
+            <span class="drawer-menu__icon drawer-menu__icon--bottom"></span><!-- /.drawer-menu__icon -->
+          </div><!-- /.drawer-menu -->
+        </button><!-- /.drawer -->
+
+        <h1 class="header-sp-logo">
+          <a href="#" class="header-sp-logo__link">
+            <img src="../img/common/logo.png" alt="Rich-Life">
+          </a><!-- /.header-sp-logo__link -->
+        </h1><!-- /.header-sp-logo -->
+
+        <ul class="header-sp-iconList">
+          <li class="header-sp-iconList__item">
+            <a href="#" class="arrow-link">
+              <img src="../img/common/Vector.png" alt="○○へ">
+            </a><!-- /.arrow-link -->
+          </li><!-- /.header-sp-iconList__item -->
+          <li class="header-sp-iconList__item">
+            <a href="#" class="cart-link" aria-label="カートへ">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a><!-- /.cart-link -->
+          </li><!-- /.header-sp-iconList__item -->
+        </ul><!-- /.header-sp-iconList -->
+
+      </div><!-- /.header-sp-content -->
+
+      <div class="header-sp-nav">
+
+        <ul class="header-sp-nav__list">
+          <li class="header-sp-nav__item">
+            <a href="#" class="header-sp-nav__link">家具</a><!-- /.header-sp-nav__link -->
+          </li><!-- /.header-sp-nav__item -->
+          <li class="header-sp-nav__item">
+            <a href="#" class="header-sp-nav__link">家電</a><!-- /.header-sp-nav__link -->
+          </li><!-- /.header-sp-nav__item -->
+        </ul><!-- /.header-sp-nav__list -->
+
+      </div><!-- /.header-sp-nav -->
+
+    </div><!-- /.inner -->
+  </header><!-- /.header-sp -->
+
+  <div class="mainView">
+    <div class="inner">
+
+      <div class="mainView-lead">
+        <div class="mainView-lead__main">
+          <p><span>いつでもどこでも。</span></p>
+          <p><span>わたしの好きが集まる暮らし。</span></p>
+        </div><!-- /.mainView-lead__main -->
+        <div class="mainView-lead__sub">
+          <p><span>おうち空間を自由かつ手軽に模様替え</span></p>
+        </div><!-- /.mainView-lead__sub -->
+      </div><!-- /.mainView-lead -->
+
+    </div><!-- /.inner -->
+  </div><!-- /.mainView -->
+
+  <div class="appeal">
+    <div class="inner">
+
+      <div class="appeal-content">
+        <p class="appeal-text appeal-text--upper">高品質でセンスのいい<br class="max-s">家具・家電を<br></p><!-- /.appeal-text -->
+        <p class="appeal-text appeal-text--lower"><b>10</b>%<span>OFF</span>価格で<br class="max-s">レンタルできます。</p><!-- /.appeal-text -->
+        <ul class="appeal-tagList">
+          <li class="appeal-tagList__item">月額<br class="max-s">440円〜</li><!-- /.appeal-tagList__item -->
+          <li class="appeal-tagList__item">1ヶ月〜<br class="max-s">レンタル可能</li><!-- /.appeal-tagList__item -->
+          <li class="appeal-tagList__item">長期レンタル割引あり</li><!-- /.appeal-tagList__item -->
+        </ul><!-- /.appeal-tagList -->
+        <ul class="appeal-iconList">
+          <li class="appeal-iconList__item appeal-iconList__item--step">\ カンタン！ 3 STEP /</li><!-- /.appeal-iconList__item -->
+          <li class="appeal-iconList__item appeal-iconList__item--register">
+            <a class="btn btn--register">今すぐ会員登録</a><!-- /.btn -->
+          </li><!-- /.appeal-iconList__item -->
+        </ul><!-- /.appeal-iconList -->
+        <div class="appeal-decoration appeal-decoration--left">
+          <p>LIMITED TIME</p><span>CAMPAIGN</span>
+        </div><!-- /.appeal-decoration -->
+        <div class="appeal-decoration appeal-decoration--right">
+          <p>LIMITED TIME</p><span>CAMPAIGN</span>
+        </div><!-- /.appeal-decoration -->
+      </div><!-- /.appeal-content -->
+
+    </div><!-- /.inner -->
+  </div><!-- /.appeal -->
+
+  <section class="reason section">
+    <div class="inner">
+
+      <h2 class="section-title">Rich-Lifeがお約束する、<br class="max-s">5つの暮らし<span>Realization</span></h2><!-- /.section-title -->
+
+      <ul class="reason-list">
+
+        <li class="reason-list__item reason-list__item--sp-lg">
+          <p class="reason-list__header">reason<span>01</span></p><!-- /.reason-list__header -->
+          <figure class="reason-list__imgWrapper">
+            <img src="../img/common/img_chair.png" alt="椅子">
+          </figure><!-- /.reason-list__imgWrapper -->
+          <p class="reason-list__text">交換・返却費が無料で“今”最適な空間を選べる</p><!-- /.reason-list__text -->
+        </li><!-- /.reason-list__item -->
+
+        <li class="reason-list__item reason-list__item--sp-lg">
+          <p class="reason-list__header">reason<span>02</span></p><!-- /.reason-list__header -->
+          <figure class="reason-list__imgWrapper">
+            <img src="../img/common/img_woman.png" alt="女性">
+          </figure><!-- /.reason-list__imgWrapper -->
+          <p class="reason-list__text">初期コスト抑え、気軽に質の良い空間を手に入れられる</p><!-- /.reason-list__text -->
+        </li><!-- /.reason-list__item -->
+
+        <li class="reason-list__item">
+          <p class="reason-list__header">reason<span>03</span></p><!-- /.reason-list__header -->
+          <figure class="reason-list__imgWrapper">
+            <img src="../img/common/img_man.png" alt="男性">
+          </figure><!-- /.reason-list__imgWrapper -->
+          <p class="reason-list__text">モノを持たずに引っ越しや模様替えを楽しめる</p><!-- /.reason-list__text -->
+        </li><!-- /.reason-list__item -->
+
+        <li class="reason-list__item">
+          <p class="reason-list__header">reason<span>04</span></p><!-- /.reason-list__header -->
+          <figure class="reason-list__imgWrapper">
+            <img src="../img/common/img_earth.png" alt="地球">
+          </figure><!-- /.reason-list__imgWrapper -->
+          <p class="reason-list__text">モノをなるべく捨てない、環境に優しい暮らし</p><!-- /.reason-list__text -->
+        </li><!-- /.reason-list__item -->
+
+        <li class="reason-list__item">
+          <p class="reason-list__header">reason<span>05</span></p><!-- /.reason-list__header -->
+          <figure class="reason-list__imgWrapper">
+            <img src="../img/common/img_drink.png" alt="ドリンク">
+          </figure><!-- /.reason-list__imgWrapper -->
+          <p class="reason-list__text">本当に好きなモノに囲まれる豊かな暮らし</p><!-- /.reason-list__text -->
+        </li><!-- /.reason-list__item -->
+
+      </ul><!-- /.reason-list -->
+
+    </div><!-- /.inner -->
+  </section><!-- /.reason -->
+
+  <div class="news">
+    <div class="inner">
+
+      <p class="news-text">おかげさまで<br class="max-s">Rich-Life USER 総会員数<span><b>16</b>万人突破!</span></p><!-- /.news-text -->
+
+    </div><!-- /.inner -->
+  </div><!-- /.news -->
+
+  <section class="voice section">
+    <div class="inner">
+
+      <h2 class="section-title">利用者さまの声<span>Voice</span></h2><!-- /.section-title -->
+
+      <div class="voice-list">
+
+        <article class="voice-list__item">
+          <div class="voice-list__body">
+            <h3 class="voice-list__title">
+              <p><span>センスのいい家具で</span></p>
+              <p><span>ワンランク上のお部屋に</span></p>
+            </h3><!-- /.voice-list__title -->
+            <p class="voice-list__text">必要なときにだけ借りることができるコンセプトに魅力を感じて利用。<br>レンタルできる家具はどれもセンスが良いので、ハズレがありません。そしてRich-Lifeの家具をお迎えしたことで、いつものおうち空間がワンランク上の部屋になって本当にうれしいです。<br>今ではシーズンごとに家具のテイストを変えるのが楽しみになっています。</p><!-- /.voice-list__text -->
+            <p class="voice-list__person">20代女性・XXXX子さん</p><!-- /.voice-list__person -->
+          </div><!-- /.voice-list__body -->
+          <figure class="voice-list__imgWrapper">
+            <img src="../img/common/img_woman in the room.png" alt="部屋の中にいる女性">
+          </figure><!-- /.voice-list__imgWrapper -->
+        </article><!-- /.voice-list__item -->
+
+        <article class="voice-list__item">
+          <div class="voice-list__body">
+            <h3 class="voice-list__title">
+              <p><span>家具家電を汚した時の</span></p>
+              <p><span>レンタル保証がうれしい。</span></p>
+            </h3><!-- /.voice-list__title -->
+            <p class="voice-list__text">家具のレンタルに興味はあったものの、小さい子どもがいるので家具・家電を汚してしまった時のことが心配でなかなか踏み切れずにいました。ですがRich-Lifeは家具を汚したときの保証があるので安心して利用できています。以前子供がソファーに飲み物をこぼしてしまったのですが無料で交換してくれてとても助かりました。</p><!-- /.voice-list__text -->
+            <p class="voice-list__person">30代女性・XXXX子さん</p><!-- /.voice-list__person -->
+          </div><!-- /.voice-list__body -->
+          <figure class="voice-list__imgWrapper">
+            <img src="../img/common/img_parent&child.png" alt="母親と子供">
+          </figure><!-- /.voice-list__imgWrapper -->
+        </article><!-- /.voice-list__item -->
+
+        <article class="voice-list__item">
+          <div class="voice-list__body">
+            <h3 class="voice-list__title">
+              <p><span>本当に好きなモノに囲まれる</span></p>
+              <p><span>豊かな暮らしを。</span></p>
+            </h3><!-- /.voice-list__title -->
+            <p class="voice-list__text">子どもが巣立ち、これからは必要最小限でかつ品質の良いお気に入りのモノたちに囲まれた生活をしたいと思っていました。でもいきなり購入するのは気が引ける、と思っていたところこちらのサービスを見つけました。月額440円〜利用できますので色々試しながらこれからの自分たちに合った家具・家電を探しています。</p><!-- /.voice-list__text -->
+            <p class="voice-list__person">50代女性・XXXX子さん</p><!-- /.voice-list__person -->
+          </div><!-- /.voice-list__body -->
+          <figure class="voice-list__imgWrapper">
+            <img src="../img/common/img_room 1.png" alt="部屋">
+          </figure><!-- /.voice-list__imgWrapper -->
+        </article><!-- /.voice-list__item -->
+
+      </div><!-- /.voice-list -->
+
+    </div><!-- /.inner -->
+  </section><!-- /.voice -->
+
+  <section class="solution section">
+    <div class="inner">
+
+      <h2 class="section-title">こんなことで<br class="max-s">お悩みではないですか？<span>Solution</span></h2><!-- /.section-title -->
+
+      <ul class="solution-list">
+        <li class="solution-list__item">しっくりくる家具を選びたい。でもいきなり買うのは自信がない</li><!-- /.solution-list__item -->
+        <li class="solution-list__item">引っ越しのたびに物を持っていることが大きな負担である。</li><!-- /.solution-list__item -->
+        <li class="solution-list__item">きちんとした家具を使いたいけど、予算的に負担が大きい</li><!-- /.solution-list__item -->
+        <li class="solution-list__item solution-list__item--short">新しい商品が出たら買い換えたい</li><!-- /.solution-list__item -->
+        <li class="solution-list__item solution-list__item--short">模様替えをもっと楽しみたい</li><!-- /.solution-list__item -->
+        <li class="solution-list__item">モノを捨てない、環境に優しい暮らしを楽しみながらしたい</li><!-- /.solution-list__item -->
+      </ul><!-- /.solution-list -->
+
+      <div class="solution-lead">Rich-Lifeの<br class="max-s">家具・家電レンタルサービスは<br class="max-s">そんな理想の暮らしをご提供いたします。</div><!-- /.solution-lead -->
+
+    </div><!-- /.inner -->
+  </section><!-- /.solution -->
+
+  <section class="realization section">
+    <div class="inner">
+
+      <h2 class="section-title">Rich-Lifeで叶える、<br class="max-s">理想の暮らし紹介<span>Realization</span></h2><!-- /.section-title -->
+
+      <ul class="realization-list">
+
+        <li class="realization-list__item">
+
+          <picture class="realization-list__imgWrapper">
+            <source srcset="../img/common/img_main.png" media="(min-width: 768px)" alt="リビング">
+            <img src="../img/common/sp/img_main.png" alt="リビング">
+          </picture><!-- /.realization-list__imgWrapper -->
+
+          <section class="realization-list__body realization-body">
+
+            <div class="realization-body__content">
+
+              <h3 class="realization-body__title realization-body__title--pc">
+                <span>「スキ」なものを際立たせた空間作りを。</span>
+              </h3><!-- /.realization-body__title -->
+
+              <h3 class="realization-body__title realization-body__title--sp">
+                <p><span>「スキ」なものを際立たせた</span></p>
+                <p><span>空間作りを。</span></p>
+              </h3><!-- /.realization-body__title -->
+
+              <ul class="realization-body__detailList realization-detailList">
+
+                <li class="realization-detailList__item">
+                  <p class="realization-detailList__title">STYLE POINT</p><!-- /.realization-detailList__title -->
+                  <p class="realization-detailList__description">ソファの足元にオットマンを配置すれば、カウチスタイルの出来上がり。<br>アームレスの特徴を活かして左右どちらにでも足を降ろしやすいので、楽な姿勢を見つけてみて。</p><!-- /.realization-detailList__description -->
+                  <figure class="realization-detailList__imgWrapper">
+                    <img src="../img/common/sp/img_man.png" alt="男性">
+                  </figure><!-- /.realization-detailList__imgWrapper -->
+                </li><!-- /.realization-detailList__item -->
+
+                <li class="realization-detailList__item">
+                  <p class="realization-detailList__title">ONE POINT ADVICE</p><!-- /.realization-detailList__title -->
+                  <p class="realization-detailList__description">モバイルプロジェクターをサイドテーブルに置いて、足を伸ばした状態でゆったりと映画を楽むのはどうでしょう。Rich-Lifeではターンテーブルやスピーカーなどの音楽 家電も取り扱っています。</p><!-- /.realization-detailList__description -->
+                  <figure class="realization-detailList__imgWrapper">
+                    <img src="../img/common/sp/img_projector.png" alt="プロジェクタ">
+                  </figure><!-- /.realization-detailList__imgWrapper -->
+                </li><!-- /.realization-detailList__item -->
+
+              </ul><!-- /.realization-body__detailList -->
+
+            </div><!-- /.realization-body__content -->
+
+            <figure class="realization-list__bodyImgWrapper">
+              <img src="../img/common/img_man (1).png" alt="男性">
+            </figure><!-- /.realization-list__bodyImgWrapper -->
+
+            <figure class="realization-list__bodyImgWrapper">
+              <img src="../img/common/img_projector.png" alt="プロジェクタ">
+            </figure><!-- /.realization-list__bodyImgWrapper -->
+
+          </section><!-- /.realization-list__body -->
+
+          <section class="realization-list__lineUp realization-lineUp">
+
+            <h3 class="realization-lineUp__title">使用している家具・家電<span>LINE UP</span></h3><!-- /.realization-lineUp__title -->
+
+            <div class="realization-lineUp__list">
+
+              <article class="realization-lineUp__item">
+                <div class="realization-lineUp__body">
+                  <h4 class="realization-lineUp__itemTitle">House of Speaker</h4><!-- /.realization-lineUp__itemTitle -->
+                  <p class="realization-lineUp__itemInfo">Rich Black</p><!-- /.realization-lineUp__itemInfo -->
+                </div><!-- /.realization-lineUp__body -->
+                <figure class="realization-lineUp__imgWrepper">
+                  <img src="../img/common/img_speaker.png" alt="スピーカー">
+                </figure><!-- /.realization-lineUp__imgWrepper -->
+              </article><!-- /.realization-lineUp__item -->
+
+              <article class="realization-lineUp__item">
+                <div class="realization-lineUp__body">
+                  <h4 class="realization-lineUp__itemTitle">Mobile Projector</h4><!-- /.realization-lineUp__itemTitle -->
+                  <p class="realization-lineUp__itemInfo">Silver</p><!-- /.realization-lineUp__itemInfo -->
+                </div><!-- /.realization-lineUp__body -->
+                <figure class="realization-lineUp__imgWrepper">
+                  <img src="../img/common/img_projector (1).png" alt="プロジェクタ">
+                </figure><!-- /.realization-lineUp__imgWrepper -->
+              </article><!-- /.realization-lineUp__item -->
+
+              <article class="realization-lineUp__item">
+                <div class="realization-lineUp__body">
+                  <h4 class="realization-lineUp__itemTitle">Couch <br class="max-s">Sofa</h4><!-- /.realization-lineUp__itemTitle -->
+                  <p class="realization-lineUp__itemInfo">1P</p><!-- /.realization-lineUp__itemInfo -->
+                </div><!-- /.realization-lineUp__body -->
+                <figure class="realization-lineUp__imgWrepper">
+                  <img src="../img/common/img_roomsofa.png" alt="ソファ">
+                </figure><!-- /.realization-lineUp__imgWrepper -->
+              </article><!-- /.realization-lineUp__item -->
+
+            </div><!-- /.realization-lineUp__list -->
+
+          </section><!-- /.realization-list__lineUp -->
+
+          <div class="realization-list__bg"></div><!-- /.realization-list__bg -->
+
+        </li><!-- /.realization-list__item -->
+
+        <li class="realization-list__item">
+
+          <picture class="realization-list__imgWrapper">
+            <source srcset="../img/common/img_main2.png" media="(min-width: 768px)" alt="リビング">
+            <img src="../img/common/sp/img_main2.png" alt="リビング">
+          </picture><!-- /.realization-list__imgWrapper -->
+
+          <section class="realization-list__body realization-body realization-body--reverse">
+
+            <div class="realization-body__content">
+
+              <h3 class="realization-body__title realization-body__title--pc">
+                <span>季節にあった彩りを手軽に楽しむ。</span>
+              </h3><!-- /.realization-body__title -->
+
+              <h3 class="realization-body__title realization-body__title--sp">
+                <p><span>季節にあった彩りを</span></p>
+                <p><span>手軽に楽しむ。</span></p>
+              </h3><!-- /.realization-body__title -->
+
+              <ul class="realization-body__detailList realization-detailList">
+
+                <li class="realization-detailList__item">
+                  <p class="realization-detailList__title">STYLE POINT</p><!-- /.realization-detailList__title -->
+                  <p class="realization-detailList__description">ソファの上のクッションや壁面のフレーム、ソファ横の1人掛けの椅子などをベージュ〜ブラウンのアースカラーで統一。一方で碧編の白をワゴンの上に置くことで調和をとり、全体的に落ち着いた雰囲気に。</p><!-- /.realization-detailList__description -->
+                  <figure class="realization-detailList__imgWrapper">
+                    <img src="../img/common/sp/img_room-right.png" alt="リビング">
+                  </figure><!-- /.realization-detailList__imgWrapper -->
+                </li><!-- /.realization-detailList__item -->
+
+                <li class="realization-detailList__item">
+                  <p class="realization-detailList__title">ONE POINT ADVICE</p><!-- /.realization-detailList__title -->
+                  <p class="realization-detailList__description">お部屋のコーディネートをまとめるコツの一つとして、同系色を散らして使うテクニックがあります。寒い冬の日でもどこかあたたかさと落ち着きを感じさせるベージュ〜ブラウンのアースカラーを試してみては？</p><!-- /.realization-detailList__description -->
+                  <figure class="realization-detailList__imgWrapper">
+                    <img src="../img/common/sp/img_room-left.png" alt="リビング">
+                  </figure><!-- /.realization-detailList__imgWrapper -->
+                </li><!-- /.realization-detailList__item -->
+
+              </ul><!-- /.realization-body__detailList -->
+
+            </div><!-- /.realization-body__content -->
+
+            <figure class="realization-list__bodyImgWrapper">
+              <img src="../img/common/img_room-right.png" alt="リビング">
+            </figure><!-- /.realization-list__bodyImgWrapper -->
+
+            <figure class="realization-list__bodyImgWrapper">
+              <img src="../img/common/img_room-left.png" alt="リビング">
+            </figure><!-- /.realization-list__bodyImgWrapper -->
+
+          </section><!-- /.realization-list__body -->
+
+          <section class="realization-list__lineUp realization-lineUp">
+
+            <h3 class="realization-lineUp__title">使用している家具・家電<span>LINE UP</span></h3><!-- /.realization-lineUp__title -->
+
+            <div class="realization-lineUp__list">
+
+              <article class="realization-lineUp__item">
+                <div class="realization-lineUp__body">
+                  <h4 class="realization-lineUp__itemTitle">Low Sofa</h4><!-- /.realization-lineUp__itemTitle -->
+                  <p class="realization-lineUp__itemInfo">ローソファ</p><!-- /.realization-lineUp__itemInfo -->
+                </div><!-- /.realization-lineUp__body -->
+                <figure class="realization-lineUp__imgWrepper">
+                  <img src="../img/common/img_sofa.png" alt="ソファ">
+                </figure><!-- /.realization-lineUp__imgWrepper -->
+              </article><!-- /.realization-lineUp__item -->
+
+              <article class="realization-lineUp__item">
+                <div class="realization-lineUp__body">
+                  <h4 class="realization-lineUp__itemTitle">Mini Table</h4><!-- /.realization-lineUp__itemTitle -->
+                  <p class="realization-lineUp__itemInfo">直径45cm</p><!-- /.realization-lineUp__itemInfo -->
+                </div><!-- /.realization-lineUp__body -->
+                <figure class="realization-lineUp__imgWrepper">
+                  <img src="../img/common/img_table.png" alt="テーブル">
+                </figure><!-- /.realization-lineUp__imgWrepper -->
+              </article><!-- /.realization-lineUp__item -->
+
+              <article class="realization-lineUp__item">
+                <div class="realization-lineUp__body">
+                  <h4 class="realization-lineUp__itemTitle">Single Sofa</h4><!-- /.realization-lineUp__itemTitle -->
+                  <p class="realization-lineUp__itemInfo">一人掛けソファ</p><!-- /.realization-lineUp__itemInfo -->
+                </div><!-- /.realization-lineUp__body -->
+                <figure class="realization-lineUp__imgWrepper">
+                  <img src="../img/common/img_chair (1).png" alt="イス">
+                </figure><!-- /.realization-lineUp__imgWrepper -->
+              </article><!-- /.realization-lineUp__item -->
+
+            </div><!-- /.realization-lineUp__list -->
+
+          </section><!-- /.realization-list__lineUp -->
+
+          <div class="realization-list__bg"></div><!-- /.realization-list__bg -->
+
+        </li><!-- /.realization-list__item -->
+
+      </ul><!-- /.realization-list -->
+
+    </div><!-- /.inner -->
+  </section><!-- /.realization -->
+
+  <div class="appeal">
+    <div class="inner">
+
+      <div class="appeal-content">
+        <p class="appeal-text appeal-text--upper">高品質でセンスのいい<br class="max-s">家具・家電を<br></p><!-- /.appeal-text -->
+        <p class="appeal-text appeal-text--lower"><b>10</b>%<span>OFF</span>価格で<br class="max-s">レンタルできます。</p><!-- /.appeal-text -->
+        <ul class="appeal-tagList">
+          <li class="appeal-tagList__item">月額<br class="max-s">440円〜</li><!-- /.appeal-tagList__item -->
+          <li class="appeal-tagList__item">1ヶ月〜<br class="max-s">レンタル可能</li><!-- /.appeal-tagList__item -->
+          <li class="appeal-tagList__item">長期レンタル割引あり</li><!-- /.appeal-tagList__item -->
+        </ul><!-- /.appeal-tagList -->
+        <ul class="appeal-iconList">
+          <li class="appeal-iconList__item appeal-iconList__item--step">\ カンタン！ 3 STEP /</li><!-- /.appeal-iconList__item -->
+          <li class="appeal-iconList__item appeal-iconList__item--register">
+            <a class="btn btn--register">今すぐ会員登録</a><!-- /.btn -->
+          </li><!-- /.appeal-iconList__item -->
+        </ul><!-- /.appeal-iconList -->
+        <div class="appeal-decoration appeal-decoration--left">
+          <p>LIMITED TIME</p><span>CAMPAIGN</span>
+        </div><!-- /.appeal-decoration -->
+        <div class="appeal-decoration appeal-decoration--right">
+          <p>LIMITED TIME</p><span>CAMPAIGN</span>
+        </div><!-- /.appeal-decoration -->
+      </div><!-- /.appeal-content -->
+
+    </div><!-- /.inner -->
+  </div><!-- /.appeal -->
+
+  <section class="feature section">
+    <div class="inner">
+
+      <h2 class="section-title">Rich-Lifeが愛される<br class="max-s">4つのポイント<span>Features</span></h2><!-- /.section-title -->
+
+      <div class="feature-list">
+
+        <article class="feature-list__item">
+          <div class="feature-list__body">
+            <h3 class="feature-list__title">
+              <span>point 01</span>
+              <p>交換・返却が自由でカンタン</p>
+            </h3><!-- /.feature-list__title -->
+            <figure class="feature-list__imgWrapper-sp">
+              <img src="../img/common/img_desk&chair.png" alt="デスクと椅子">
+            </figure><!-- /.feature-list__imgWrapper-sp -->
+            <p class="feature-list__text">自分の生活に最適なものを使うために時間や労力をかけて選んだにも関わらず、「思っていたのと違う」と後悔した経験はありませんか？Rich-Lifeでは家具・家電のレンタルができますので取捨選択にかける時間を大幅にカットできます。また実際に使用してみて、自分に合わないと思ったらすぐに交換・返却ができるので、手軽さゆえの心の余裕が生まれるのもポイント。</p><!-- /.feature-list__text -->
+          </div><!-- /.feature-list__body -->
+          <figure class="feature-list__imgWrapper-pc">
+            <img src="../img/common/img_desk&chair.png" alt="デスクと椅子">
+          </figure><!-- /.feature-list__imgWrapper-pc -->
+        </article><!-- /.feature-list__item -->
+
+        <article class="feature-list__item">
+          <div class="feature-list__body">
+            <h3 class="feature-list__title">
+              <span>point 02</span>
+              <p>月額定額制で返却期限なし</p>
+            </h3><!-- /.feature-list__title -->
+            <figure class="feature-list__imgWrapper-sp">
+              <img src="../img/common/img_subscription.png" alt="ソファ">
+            </figure><!-- /.feature-list__imgWrapper-sp -->
+            <p class="feature-list__text">1ヶ月という短期間からのレンタルが可能ですので、自分により合う家具・家電を色々試せる手軽さが最大の特徴。また、月額定額制なので費用管理がしやすいのもポイント。</p><!-- /.feature-list__text -->
+          </div><!-- /.feature-list__body -->
+          <figure class="feature-list__imgWrapper-pc">
+            <img src="../img/common/img_subscription.png" alt="ソファ">
+          </figure><!-- /.feature-list__imgWrapper-pc -->
+        </article><!-- /.feature-list__item -->
+
+        <article class="feature-list__item">
+          <div class="feature-list__body">
+            <h3 class="feature-list__title">
+              <span>point 03</span>
+              <p>きちんとした品質でセンスのいいものだけをセレクト</p>
+            </h3><!-- /.feature-list__title -->
+            <figure class="feature-list__imgWrapper-sp">
+              <img src="../img/common/img_room.png" alt="ルーム">
+            </figure><!-- /.feature-list__imgWrapper-sp -->
+            <p class="feature-list__text">きちんとしたモノは自分の生活の質を向上させてくれます。生活の質は心の余裕にも繋がりますので、それが自然と自分の気持ちをも高めてくれる好循環が生まれます。またきちんとした品質でかつセンスのいいものだけを取り揃えておりますので家具・家電の善し悪しが分からないという人でも失敗が少ないのも嬉しいポイントです。</p><!-- /.feature-list__text -->
+          </div><!-- /.feature-list__body -->
+          <figure class="feature-list__imgWrapper-pc">
+            <img src="../img/common/img_room.png" alt="ルーム">
+          </figure><!-- /.feature-list__imgWrapper-pc -->
+        </article><!-- /.feature-list__item -->
+
+        <article class="feature-list__item">
+          <div class="feature-list__body">
+            <h3 class="feature-list__title">
+              <span>point 04</span>
+              <p>ライフステージの変化に対応</p>
+            </h3><!-- /.feature-list__title -->
+            <figure class="feature-list__imgWrapper-sp">
+              <img src="../img/common/img_family.png" alt="家族">
+            </figure><!-- /.feature-list__imgWrapper-sp -->
+            <p class="feature-list__text">年齢が上がるにつれてライフステージは変遷していくもの。それと同時に、そのときの暮らしにあった家具・家電のスペックが変わりますので、購入するとなると生活スタイルが変わるたびに家具・家電の入れ替えを迫られるなんてことも。でもRich-Lifeはレンタル品なので、先の心配をすることなく「今の自分に必要なモノだけ」を置いておける気楽さを手に入れられます。また、まだまだ使えるモノを廃棄するという手間や罪悪感をも払拭してくれます。</p><!-- /.feature-list__text -->
+          </div><!-- /.feature-list__body -->
+          <figure class="feature-list__imgWrapper-pc">
+            <img src="../img/common/img_family.png" alt="家族">
+          </figure><!-- /.feature-list__imgWrapper-pc -->
+        </article><!-- /.feature-list__item -->
+
+      </div><!-- /.feature-list -->
+
+    </div><!-- /.inner -->
+  </section><!-- /.feature -->
+
+  <section class="use section">
+    <div class="inner">
+
+      <h2 class="section-title">気軽に簡単。<br class="max-s">Rich-Lifeの使い方<span>How To Use</span></h2><!-- /.section-title -->
+
+      <ul class="use-list">
+
+        <li class="use-list__item">
+          <div class="use-list__body">
+            <p class="use-list__title"><span>01</span>ネットで注文</p><!-- /.use-list__title -->
+            <p class="use-list__text">スマホやパソコンから、商品と配送希望日を選んで、注文</p><!-- /.use-list__text -->
+          </div><!-- /.use-list__body -->
+          <figure class="use-list__imgWrapper">
+            <img src="../img/common/img_search.png" alt="スマートフォン">
+          </figure><!-- /.use-list__imgWrapper -->
+        </li><!-- /.use-list__item -->
+        <li class="use-list__item">
+
+          <div class="use-list__body">
+            <p class="use-list__title"><span>02</span>配送・設置</p><!-- /.use-list__title -->
+            <p class="use-list__text">専門業者がご自宅までお届け 商品の搬入は全ておまかせ</p><!-- /.use-list__text -->
+          </div><!-- /.use-list__body -->
+          <figure class="use-list__imgWrapper">
+            <img src="../img/common/img_moving.jpeg" alt="荷物を運んでいる男性">
+          </figure><!-- /.use-list__imgWrapper -->
+        </li><!-- /.use-list__item -->
+
+        <li class="use-list__item">
+          <div class="use-list__body">
+            <p class="use-list__title"><span>03</span>ご利用</p><!-- /.use-list__title -->
+            <p class="use-list__text">購入した商品と同じように普段の生活でご利用いただけます</p><!-- /.use-list__text -->
+          </div><!-- /.use-list__body -->
+          <figure class="use-list__imgWrapper">
+            <img src="../img/common/img_chair.jpeg" alt="椅子">
+          </figure><!-- /.use-list__imgWrapper -->
+        </li><!-- /.use-list__item -->
+
+        <li class="use-list__item">
+          <div class="use-list__body">
+            <p class="use-list__title"><span>04</span>交換・返送</p><!-- /.use-list__title -->
+            <p class="use-list__text">交換や返却の際も、搬出は専門業者に全ておまかせ ※一部地域を除く</p><!-- /.use-list__text -->
+          </div><!-- /.use-list__body -->
+          <figure class="use-list__imgWrapper">
+            <img src="../img/common/img_room.jpeg" alt="リビング">
+          </figure><!-- /.use-list__imgWrapper -->
+        </li><!-- /.use-list__item -->
+
+      </ul><!-- /.use-list -->
+
+    </div><!-- /.inner -->
+  </section><!-- /.use -->
+
+  <div class="appeal">
+    <div class="inner">
+
+      <div class="appeal-content">
+        <p class="appeal-text appeal-text--upper">高品質でセンスのいい<br class="max-s">家具・家電を<br></p><!-- /.appeal-text -->
+        <p class="appeal-text appeal-text--lower"><b>10</b>%<span>OFF</span>価格で<br class="max-s">レンタルできます。</p><!-- /.appeal-text -->
+        <ul class="appeal-tagList">
+          <li class="appeal-tagList__item">月額<br class="max-s">440円〜</li><!-- /.appeal-tagList__item -->
+          <li class="appeal-tagList__item">1ヶ月〜<br class="max-s">レンタル可能</li><!-- /.appeal-tagList__item -->
+          <li class="appeal-tagList__item">長期レンタル割引あり</li><!-- /.appeal-tagList__item -->
+        </ul><!-- /.appeal-tagList -->
+        <ul class="appeal-iconList">
+          <li class="appeal-iconList__item appeal-iconList__item--step">\ カンタン！ 3 STEP /</li><!-- /.appeal-iconList__item -->
+          <li class="appeal-iconList__item appeal-iconList__item--register">
+            <a class="btn btn--register">今すぐ会員登録</a><!-- /.btn -->
+          </li><!-- /.appeal-iconList__item -->
+        </ul><!-- /.appeal-iconList -->
+        <div class="appeal-decoration appeal-decoration--left">
+          <p>LIMITED TIME</p><span>CAMPAIGN</span>
+        </div><!-- /.appeal-decoration -->
+        <div class="appeal-decoration appeal-decoration--right">
+          <p>LIMITED TIME</p><span>CAMPAIGN</span>
+        </div><!-- /.appeal-decoration -->
+      </div><!-- /.appeal-content -->
+
+    </div><!-- /.inner -->
+  </div><!-- /.appeal -->
+
+  <section class="faq section">
+    <div class="inner">
+
+      <h2 class="section-title">よくある質問<span>FAQ</span></h2><!-- /.section-title -->
+
+      <dl class="faq-list">
+
+        <div class="faq-list__item js-slide-trigger">
+          <dt class="faq-list__question">Rich-Lifeはどんなサービスですか？</dt><!-- /.faq-list__question -->
+          <dd class="faq-list__answer js-slide-target">Rich-lifeは必要なときに必要なものだけを使える家具・家電のレンタルサービスです。</dd><!-- /.faq-list__answer -->
+        </div><!-- /.faq-list__item -->
+
+        <div class="faq-list__item js-slide-trigger">
+          <dt class="faq-list__question">レンタル期間は選べますか？</dt><!-- /.faq-list__question -->
+          <dd class="faq-list__answer js-slide-target">レンタル期間は1ヶ月からです。更新手続きは毎月自動で行いますので更新手続きは不要です。</dd><!-- /.faq-list__answer -->
+        </div><!-- /.faq-list__item -->
+
+        <div class="faq-list__item js-slide-trigger">
+          <dt class="faq-list__question">注文してから届くまでどのくらい期間がかかりますか？</dt><!-- /.faq-list__question -->
+          <dd class="faq-list__answer js-slide-target">商品とお住まいの地域によりますが、約1週間ほどでお届けいたします。</dd><!-- /.faq-list__answer -->
+        </div><!-- /.faq-list__item -->
+
+        <div class="faq-list__item js-slide-trigger">
+          <dt class="faq-list__question">商品の交換は可能ですか？</dt><!-- /.faq-list__question -->
+          <dd class="faq-list__answer js-slide-target">可能でございます。マイページより交換申請手続きをお願いいたします。</dd><!-- /.faq-list__answer -->
+        </div><!-- /.faq-list__item -->
+
+        <div class="faq-list__item js-slide-trigger">
+          <dt class="faq-list__question">申込の仕方を教えてください。</dt><!-- /.faq-list__question -->
+          <dd class="faq-list__answer js-slide-target">1.ご希望の商品を選択し、カートへ入れてください。<br>2.右上のカートボタンを押し、お届け先と支払い情報の登録をお願いいたします。<br>3.配送日を選択し、注文確定ボタンを押していただけましたら注文完了となります。</dd><!-- /.faq-list__answer -->
+        </div><!-- /.faq-list__item -->
+
+      </dl><!-- /.faq-list -->
+
+      <div class="faq-btnWrapper">
+        <a href="#" class="btn btn--faq">よくある質問を見る</a><!-- /.btn -->
+      </div><!-- /.faq-btnWrapper -->
+
+    </div><!-- /.inner -->
+  </section><!-- /.faq -->
+
+  <footer class="footer">
+    <div class="inner">
+
+      <ul class="footer-list">
+
+        <li class="footer-list__item">
+
+          <p class="footer-list__title">Service</p><!-- /.footer-list__title -->
+
+          <ul class="footer-list__subList footer-subList">
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">すべて</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">家具</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">家電</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">お知らせ</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">商品の魅力・選び方記事</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+          </ul><!-- /.footer-list__subList -->
+
+        </li><!-- /.footer-list__item -->
+
+        <li class="footer-list__item">
+
+          <p class="footer-list__title">About</p><!-- /.footer-list__title -->
+
+          <ul class="footer-list__subList footer-subList">
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">会社概要</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">採用情報</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+          </ul><!-- /.footer-list__subList -->
+
+        </li><!-- /.footer-list__item -->
+
+        <li class="footer-list__item">
+
+          <p class="footer-list__title">Support</p><!-- /.footer-list__title -->
+
+          <ul class="footer-list__subList footer-subList">
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">よくある質問</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">お問い合わせ(個人のお客様)</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">お問い合わせ(法人のお客様)</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">プライバシー</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">利用規約</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">法人会員向け利用規約</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">特定商取引法に基づく表記</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+          </ul><!-- /.footer-list__subList -->
+
+        </li><!-- /.footer-list__item -->
+
+        <li class="footer-list__item">
+
+          <p class="footer-list__title">CLAS Business</p><!-- /.footer-list__title -->
+
+          <ul class="footer-list__subList footer-subList">
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">法人向けサービスについて</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">手軽にためす</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">まとめておまかせ</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+            <li class="footer-subList__item">
+              <a href="#" class="footer-subList__link">導入事例</a><!-- /.footer-subList__link -->
+            </li><!-- /.footer-subList__item -->
+          </ul><!-- /.footer-list__subList -->
+
+        </li><!-- /.footer-list__item -->
+
+      </ul><!-- /.footer-list -->
+
+      <ul class="footer-sns">
+        <li class="footer-sns__list">
+          <a href="#" class="footer-sns__link" aria-label="インスタグラムへ"><i class="fa-brands fa-instagram"></i></a><!-- /.footer-sns__link -->
+        </li><!-- /.footer-sns__list -->
+        <li class="footer-sns__list">
+          <a href="#" class="footer-sns__link" aria-label="ツイッターへ"><i class="fa-brands fa-twitter"></i></a><!-- /.footer-sns__link -->
+        </li><!-- /.footer-sns__list -->
+        <li class="footer-sns__list">
+          <a href="#" class="footer-sns__link" aria-label="フェイスブックへ"><i class="fa-brands fa-facebook-f"></i></a><!-- /.footer-sns__link -->
+        </li><!-- /.footer-sns__list -->
+      </ul><!-- /.footer-sns -->
+
+      <p class="footer-caution">本サイト内は株式会社CLAS様のご協力のもと作成したコーディング用の練習課題です。実在の人物・団体とは関係ありません。</p><!-- /.footer-caution -->
+
+      <p class="copyright">&copy; 2022 Rich-Life Inc.</p><!-- /.copyright -->
+
+    </div><!-- /.inner -->
+  </footer><!-- /.footer -->
+
+
+  <script src="/js/bundle.js"></script>
+
+</body>
+
+</html>

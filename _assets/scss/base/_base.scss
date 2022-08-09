@@ -1,0 +1,30 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+//------------------------------------
+// ベースCSS
+//------------------------------------
+body {
+	line-height: $line-height;
+	font-family: $font-family;
+	color: $color-font;
+	counter-reset: scene;
+	counter-reset: review;
+
+	overflow-x: hidden;
+	scrollbar-width: none; //Firefox対応のスクロールバー非表示コード
+	-ms-overflow-style: none; //Internet Explore対応のスクロールバー非表示コード
+
+	&::-webkit-scrollbar {
+		display: none; //Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード
+	}
+
+	a {
+
+		&:focus,
+		&:hover {
+			opacity: 0.7;
+			transition: all 0.3s;
+		}
+	}
+}

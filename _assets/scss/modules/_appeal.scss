@@ -1,0 +1,326 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+//------------------------------------
+// appeal
+//------------------------------------
+.appeal {
+  background-color: $color-main;
+  padding: rem(48) 0;
+
+  @include media(s) {
+    padding: rem(32) 0;
+  }
+}
+
+.appeal-content {
+  width: 770px;
+  max-width: 100%;
+  margin: 0 auto;
+  letter-spacing: 0.04em;
+  text-align: center;
+  background-color: $color-font-reverse;
+  padding: rem(53) rem(105) rem(44);
+  position: relative;
+
+  @include media(m) {
+    max-width: 560px;
+    padding: rem(40) rem(36);
+
+    @include media(s) {
+      max-width: 287px;
+    }
+
+    @include media(xs) {
+      padding: rem(40) rem(16);
+    }
+  }
+}
+
+.appeal-text {
+
+  &--upper {
+    width: 590px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: rem(28);
+    line-height: calc(48/28);
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    position: relative;
+
+    @include media(m) {
+      font-size: rem(24);
+      line-height: 1.5;
+
+      @include media(s) {
+        font-size: rem(20);
+        line-height: calc(28.96/20);
+      }
+    }
+
+    &::before {
+      content: "今だけ！";
+      font-size: 16px;
+      line-height: 1;
+      color: $color-font-reverse;
+      background-color: $color-font;
+      padding: rem(6) rem(2) rem(2) rem(9);
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: -41px;
+      transform: rotate(-27.5deg);
+
+      @include media(m) {
+        left: -41px;
+
+        @include media(s) {
+          top: -30px;
+        }
+      }
+    }
+  }
+
+  &--lower {
+    font-size: rem(32);
+    line-height: calc(48/32);
+    font-weight: 700;
+
+    @include media(m) {
+      font-size: rem(28);
+      line-height: 1.5;
+
+      @include media(s) {
+        font-size: rem(20);
+        line-height: 1;
+        margin-top: rem(-8);
+      }
+    }
+
+    b {
+      font-size: rem(56);
+      line-height: calc(64/56);
+
+      @include media(m) {
+        font-size: rem(48);
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.appeal-tagList {
+  margin-top: rem(25);
+
+  @include media(s) {
+    margin-top: rem(21);
+  }
+
+  &__item {
+    display: inline-block;
+    line-height: calc(36/16);
+    font-weight: bold;
+    color: $color-font-reverse;
+    background-color: $color-font;
+    padding: rem(4) rem(17) rem(2);
+    border-radius: 16px;
+
+    @include media(s) {
+      font-size: rem(14);
+      line-height: calc(20/14);
+      padding: rem(11) rem(12) rem(7);
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      @include media(s) {
+        margin-right: rem(11) !important;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+
+      @include media(s) {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+
+      @include media(m) {
+        display: block;
+        width: 350px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: rem(12);
+
+        @include media(s) {
+          width: 210px;
+        }
+      }
+    }
+  }
+}
+
+.appeal-iconList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: rem(41);
+
+  @include media(s) {
+    display: block;
+    margin-top: rem(32);
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      @include media(s) {
+        margin-top: rem(23);
+      }
+    }
+
+    &--step {
+      font-size: rem(20);
+      font-weight: 700;
+      background-color: $color-main;
+      padding: rem(19) rem(26);
+      position: relative;
+
+      @include media(m) {
+        font-size: rem(16);
+        padding: rem(8) rem(23) rem(4);
+
+        @include media(s) {
+          display: inline-block;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        border: 8px solid transparent;
+        border-left: 20px solid #F2F4F1;
+
+        @include media(m) {
+          top: 32%;
+
+          @include media(s) {
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            border: 4px solid transparent;
+            border-top: 10px solid #F2F4F1;
+            border-left: 4px solid transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.appeal-decoration {
+  font-size: rem(56);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: rgba($color-font, 0.08);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include media(l) {
+    font-size: rem(32);
+    height: 100%;
+  }
+
+  p,
+  span {
+    @include media(m) {
+      display: inline-block;
+    }
+  }
+
+  span {
+    display: block;
+    font-size: rem(72);
+    letter-spacing: 0.04em;
+
+    @include media(l) {
+      font-size: rem(56);
+
+      @include media(m) {
+        font-size: rem(32);
+      }
+    }
+  }
+
+  &--left {
+    writing-mode: vertical-lr;
+    left: -27%;
+
+    @include media(l) {
+      left: -15%;
+
+      @include media(m) {
+        left: -12%;
+
+        @include media(s) {
+          display: flex;
+          flex-direction: row-reverse;
+          top: 40%;
+        }
+      }
+    }
+
+    p,
+    span {
+      transform: rotate(180deg);
+    }
+
+    span {
+      margin-left: rem(42);
+
+      @include media(l) {
+        margin-left: 0;
+
+        @include media(s) {
+          margin-bottom: rem(8);
+        }
+      }
+    }
+  }
+
+  &--right {
+    writing-mode: vertical-rl;
+    right: -27%;
+
+    @include media(l) {
+      right: -15%;
+
+      @include media(m) {
+        right: -12%;
+      }
+    }
+
+    span {
+      margin-right: rem(42);
+
+      @include media(l) {
+        margin-right: 0;
+
+        @include media(s) {
+          display: inline-block;
+          margin-top: rem(8);
+        }
+      }
+    }
+  }
+}

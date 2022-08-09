@@ -1,0 +1,77 @@
+@use '../mixin/mixin'as *;
+@use '../setting/setting'as *;
+
+//------------------------------------
+// layout
+//------------------------------------
+.inner {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 130px;
+
+	@include media(l) {
+		padding: 0 40px;
+
+		@include media(s) {
+			padding: 0 12px;
+		}
+	}
+}
+
+.section {
+	padding: rem(80) 0;
+
+	@include media(s) {
+		padding: rem(32) 0;
+	}
+}
+
+.section-title {
+	font-size: rem(24);
+	font-weight: 500;
+	font-family: $font-family-ja;
+	text-align: center;
+	position: relative;
+
+	@include media(s) {
+		font-size: rem(20);
+		line-height: calc(29/20);
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 160px;
+		height: 1px;
+		background-color: $color-font;
+		position: absolute;
+		bottom: 47px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include media(s) {
+			width: 80px;
+			bottom: 40px;
+		}
+	}
+
+	span {
+		display: block;
+		font-weight: 400;
+		font-family: $font-family-en;
+		text-transform: uppercase;
+		margin-top: rem(24);
+
+		@include media(s) {
+			margin-top: rem(20);
+		}
+	}
+}
+
+.max-s {
+	display: none;
+
+	@include media(s) {
+		display: block;
+	}
+}
